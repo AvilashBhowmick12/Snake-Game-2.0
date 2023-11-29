@@ -147,3 +147,48 @@ window.addEventListener('keydown', e =>{
     }
 
 });
+
+// Get the device type from the user agent
+var device = navigator.userAgent.toLowerCase();
+
+// Get the screen width
+var width = window.innerWidth;
+
+// Get the controller div element
+var controller = document.getElementById("controller");
+
+// Show or hide the controller div based on the device and the width
+if (device.includes("windows")) {
+  // Hide the controller if the device is Windows
+  controller.style.display = "none";
+} else if (width < 768) {
+  // Show the controller if the device is not Windows and the width is less than 768 pixels
+  controller.style.display = "flex";
+} else {
+  // Hide the controller otherwise
+  controller.style.display = "none";
+}
+
+// Get the buttons by id
+var up = document.getElementById("up");
+var down = document.getElementById("down");
+var left = document.getElementById("left");
+var right = document.getElementById("right");
+
+// Add event listeners to the buttons and call the functions to change the snake direction
+up.addEventListener("click", function() {
+  upPressed();
+});
+
+down.addEventListener("click", function() {
+  downPressed();
+});
+
+left.addEventListener("click", function() {
+  leftPressed();
+});
+
+right.addEventListener("click", function() {
+  rightPressed();
+});
+

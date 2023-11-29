@@ -87,3 +87,13 @@
 .btn:active {
   background-color: #ccc;
 }
+
+@media (max-width: 768px) {
+  #controller {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+

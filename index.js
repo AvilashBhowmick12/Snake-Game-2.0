@@ -192,3 +192,18 @@ right.addEventListener("click", function() {
   rightPressed();
 });
 
+// Define the functions that change the snake direction when the buttons are clicked function upClicked() { inputDir.x = 0; inputDir.y = -1; }
+
+function downClicked() { inputDir.x = 0; inputDir.y = 1; }
+
+function leftClicked() { inputDir.x = -1; inputDir.y = 0; }
+
+function rightClicked() { inputDir.x = 1; inputDir.y = 0; }
+
+// Add event listeners to the buttons and call the functions to change the snake direction up.addEventListener(“click”, function(e) { e.preventDefault(); // Prevent the default behavior of the click event upClicked(); // Call the function to change the snake direction to up });
+
+down.addEventListener(“click”, function(e) { e.preventDefault(); // Prevent the default behavior of the click event downClicked(); // Call the function to change the snake direction to down });
+
+left.addEventListener(“click”, function(e) { e.preventDefault(); // Prevent the default behavior of the click event leftClicked(); // Call the function to change the snake direction to left });
+
+right.addEventListener(“click”, function(e) { e.preventDefault(); // Prevent the default behavior of the click event rightClicked(); // Call the function to change the snake direction to right });
